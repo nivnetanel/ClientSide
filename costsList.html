@@ -1,0 +1,102 @@
+<!--Developers-Details:-->
+<!--Lidan Danino 207599473
+Niv Netanel  208540302
+Carmel Bar   207895103-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script type="text/javascript" src=
+          "https://code.jquery.com/jquery-2.1.1.min.js">
+  </script>
+  <title>Costs List</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div id="main" class="card">
+        <div class="card-content">
+          <span class="card-title">Costs Manager Client Application</span>
+          <div class="row">
+            <form id="costs-form">
+              <div class="input-field col s12">
+                <input type="text" name="cost" id="cost">
+                <label for="cost">New cost item</label>
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="sum" id="sum">
+                <label for="sum">Sum</label>
+              </div>
+              <label for="categories">Choose a category:</label>
+              <select name="categories" id="categories" style="display:block;margin-left: 5px">
+                <option value="food">Food</option>
+                <option value="health">Health</option>
+                <option value="housing">Housing</option>
+                <option value="sport">Sport</option>
+                <option value="education">Education</option>
+                <option value="transportation">Transportation</option>
+              </select>
+              <br>
+              <br>
+              <br>
+              <input type="submit" value="Add item" class="btn">
+            </form>
+          </div>
+        </div>
+        <div class="card-action">
+          <h5 id="cost-title">Costs</h5>
+          <ul class="collection"></ul>
+          <a href="#" class="clear-costs btn black">Clear Costs</a>
+          <div class="input-field  s15">
+            <a class="waves-effect waves-light btn
+             modal-trigger" id="report"
+               href="#demo-modal">
+              Report
+            </a>
+            <input type="month" id="monthAndYear" name="start" min="2018-01" value="2023-01">
+          </div>
+        </div>
+        <div class="card-action">
+          <!-- Modal Structure -->
+          <div id="demo-modal" class="modal">
+            <div class="modal-content">
+              <h4 class="modal-h4"></h4>
+              <ol class="modal-ul">
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action
+                    modal-close waves-effect waves-green
+                    btn ">
+                Close
+              </a>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(document).ready(function () {
+                    $('.modal').modal();
+                  }
+          )
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="localStorage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
